@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Kiss Day PANDULUUUU 💋</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:black;
+overflow:hidden;
+color:white;
+}
+
+/* PASSWORD SCREEN */
+.password-screen{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:black;
+z-index:10;
+}
+
+.password-screen input{
+padding:12px;
+width:250px;
+border:none;
+border-radius:25px;
+text-align:center;
+margin-top:10px;
+}
+
+.password-screen button{
+margin-top:10px;
+padding:8px 20px;
+border:none;
+background:#8b0000;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* Background GIF */
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:url('bg.gif') center/cover no-repeat;
+opacity:0.35;
+z-index:-3;
+}
+
+/* Envelope */
+.envelope{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:300px;
+height:200px;
+background:#8b0000;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+font-weight:600;
+letter-spacing:2px;
+box-shadow:0 0 30px red;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{box-shadow:0 0 10px red;}
+to{box-shadow:0 0 45px crimson;}
+}
+
+/* Letter */
+.letter{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) scale(0);
+width:90%;
+height:85%;
+background:url('paper.jpg') center/cover;
+color:#222;
+border-radius:15px;
+padding:20px;
+overflow-y:auto;
+transition:1s;
+box-shadow:0 0 40px rgba(255,255,255,0.6);
+}
+
+.open{
+transform:translate(-50%,-50%) scale(1);
+}
+
+/* GIF styling */
+.lovegif{
+width:100%;
+border-radius:12px;
+margin:10px 0;
+}
+
+/* Glowing Name */
+.glow-name{
+font-weight:800;
+font-size:22px;
+text-align:center;
+color:#8b0000;
+animation:neon 1.5s infinite alternate;
+margin-bottom:10px;
+}
+
+@keyframes neon{
+from{text-shadow:0 0 5px red;}
+to{text-shadow:0 0 25px crimson;}
+}
+
+/* Floating emojis */
+.floating{
+position:absolute;
+font-size:22px;
+animation:float 8s linear infinite;
+opacity:0.8;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);opacity:0;}
+50%{opacity:1;}
+100%{transform:translateY(-10vh);opacity:0;}
+}
+
+/* Fireflies */
+.firefly{
+position:absolute;
+width:6px;
+height:6px;
+background:yellow;
+border-radius:50%;
+animation:fly 6s linear infinite;
+}
+
+@keyframes fly{
+0%{transform:translateY(100vh);opacity:0;}
+50%{opacity:1;}
+100%{transform:translateY(-10vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="password-screen" id="passwordScreen">
+<h2>Enter Password 💋</h2>
+<input type="password" id="passwordInput" placeholder="Enter here">
+<button onclick="checkPassword()">Unlock</button>
+</div>
+
+<div class="bg"></div>
+
+<div class="envelope" onclick="openLetter()" style="display:none;">
+TAP TO OPEN 💌
+</div>
+
+<div class="letter" id="letter">
+
+<div class="glow-name">PANDULUUUU 💋</div>
+
+<img src="love1.gif" class="lovegif">
+<img src="love2.gif" class="lovegif">
+<img src="love3.gif" class="lovegif">
+<img src="love4.gif" class="lovegif">
+
+<h2>First Kiss 🥹</h2>
+
+<p id="text"></p>
+
+</div>
+
+<audio id="music" src="song.mp3" loop></audio>
+
+<script>
+
+/* PASSWORD CHECK */
+function checkPassword(){
+let pass=document.getElementById("passwordInput").value;
+if(pass === "PANDU DIVYASREE GAIKWAD"){
+document.getElementById("passwordScreen").style.display="none";
+document.querySelector(".envelope").style.display="flex";
+}else{
+alert("Wrong Password 💔");
+}
+}
+
+/* OPEN LETTER */
+function openLetter(){
+document.querySelector(".envelope").style.display="none";
+document.getElementById("letter").classList.add("open");
+document.getElementById("music").play();
+typeWriter();
+startFloating();
+startFireflies();
+
+setTimeout(()=>{
+alert("Come back to me as my naughtiest kiddo please 🥹❤️");
+},35000);
+}
+
+/* Typing Text */
+let message=`First kiss🥹🤌🏻
+
+Niku mana first little kiss gurthundha..!? Adhe divider dhegara,
+Nakosam Lopala pg nunchi vachav, Kitkat chocolates theeskoni vachav, 
+aa chocolate wrapper theesthunte, Aww how sweet🥹 naku thinipinchadaniki
+wrapper kooda theesi isthunadu ankunelopale, Nuvemo aa chocolate ni mouth 
+lo petukoni, idhigo thinu ila ani annav,Aa Sec na thought...Ahaa vidu manchi 
+form lo unadu ani ankuna😅Naku mundhe chocolates ante pichi, when I tried to
+eat it,Nuv aa chocolate ni mouth lopalki laageskunesariki,Our both lips 👄 met
+for first time ..Aa sec emaindho kasepu motham thoughts agipoyay...Then I felt,
+Ahaa sir bagaa romantic ankunta,Chala tricks play chesthundu ankuna😅And mana first time
+deep kiss gurthundha..the day when our both Saliva & breathe exchanged in the movie hall,
+That is my all-time memory🥹🫣🤌🏻Idhantha endhuku chepthuna ankokuuu..Niku telusa…!?
+
+Ee roju Kiss Day ani andharu celebrate chesthunaru…
+But naku matram nee kiss ante just lips meedha touch kaadu…Romance kadhu ❌ 
+💋Forehead Kiss
+→ “I care about you. I’ll protect you. You’re safe with me.”
+(It shows pure love and respect.)
+💋 Cheek Kiss
+→ “I like you… I’m comfortable with you.”
+(It’s soft, cute, and full of affection.)
+💋 Hand Kiss
+→ “I admire you. I respect you.”
+(It shows value and appreciation.)
+💋 Nose Kiss
+→ “You’re adorable.”
+(Playful and sweet love.)
+💋 Neck Kiss
+→ “I feel close to you.& Where I melt.”
+(It shows deep attraction and desire.)
+💋 Lips Kiss
+→ “I want you. I choose you.”
+(It’s romantic and emotional connection.)
+💋 Shoulder Kiss
+→ “I’m here for you.”
+(Comfort and closeness.)
+💋 Hug + Kiss Together
+→ “Don’t leave. Stay with me.”
+(The most emotional one 🥺) 
+This is exactly what I felt with u, near u, only uuu🫵🏻🥹🫂
+But now, Firstly I'm missing u & us lot from Jan 10🥺There is no atleast a meet, 
+atleast a little touch,a little heartful communication b/w us😫 Nearly 1month paine
+avthundhi mana madya ee distance & disturbances😭 Raatri padukune mundhu,Nee messages 
+scroll chestha,Mana old chats chustha,Nuvvu “Gaikwad,Osey pellama,Nen chepedhi vinu Maa,
+Ala kadhu Nanna” ani pilichina voice naku inka vinipisthundhi telsa,Sry bangaru..Nijamga sry,
+Na kopaniki… na unnecessary words ki…Ninnu hurt chesina prati moment ki…
+Ninnu miss ayye la chesina prati situation ki…I'm very very sry from my bottom of the heart 🙏🏻😭🫂
+Ee distance nenu inka handle cheyalenu kanna😖Manam matladakunda undadam, normal ga behave cheyadam…😣
+Na heart ki chala kastam ga undhi😫Nuvvu na habit… na comfort… na favourite place… 🫂
+Ninnu dooram ga chudadam naku raadu…nuv naku eppatiki dhegara gane undalani untundhi🥺 Please mana madhya
+ee gap ni close cheddham kadhaa🤌🏻
+Naku nee hug kavali… nee kiss kavali…nee touch kavali..mana madya mundhula aa allari,chilipi panulu kavali🥺
+kani most importantly… nuvvu kavali🫵🏻❤️NINNU MISS AVVADAM ANTE ENTO IPUDU ARDHAM AVTHUNDI 😖Bagaa bhuddhi vachindhi 😭🫂 
+
+Happy Kiss Day kanna 🥹 
+From the girl who still waits for your kiss like it’s our first one💋`;
+
+let i=0;
+function typeWriter(){
+if(i<message.length){
+document.getElementById("text").innerHTML+=message.charAt(i);
+i++;
+setTimeout(typeWriter,25);
+}
+}
+
+/* Floating emojis */
+function startFloating(){
+let emojis=["❤️","💋","😘","🤗"];
+setInterval(()=>{
+let span=document.createElement("span");
+span.classList.add("floating");
+span.style.left=Math.random()*100+"%";
+span.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+document.body.appendChild(span);
+setTimeout(()=>span.remove(),8000);
+},500);
+}
+
+/* Fireflies */
+function startFireflies(){
+setInterval(()=>{
+let fly=document.createElement("div");
+fly.classList.add("firefly");
+fly.style.left=Math.random()*100+"%";
+document.body.appendChild(fly);
+setTimeout(()=>fly.remove(),6000);
+},300);
+}
+
+</script>
+
+</body>
+</html>
