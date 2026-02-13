@@ -91,9 +91,12 @@ transform:translate(-50%,-50%) scale(0);
 width:90%;
 height:85%;
 background:url('paper.jpg') center/cover;
-color:#222;
+color:#000;              /* Pure black */
+font-weight:700;         /* Bold */
+font-size:20px;          /* Bigger text */
+line-height:1.6;
 border-radius:15px;
-padding:20px;
+padding:25px;
 overflow-y:auto;
 transition:1s;
 box-shadow:0 0 40px rgba(255,255,255,0.6);
@@ -206,7 +209,6 @@ function openLetter(){
 document.querySelector(".envelope").style.display="none";
 document.getElementById("letter").classList.add("open");
 document.getElementById("music").play();
-typeWriter();
 startFloating();
 startFireflies();
 
@@ -273,16 +275,7 @@ kani most importantly… nuvvu kavali🫵🏻❤️NINNU MISS AVVADAM ANTE ENTO 
 
 Happy Kiss Day kanna 🥹 
 From the girl who still waits for your kiss like it’s our first one💋`;
-
-let i=0;
-function typeWriter(){
-if(i<message.length){
-document.getElementById("text").innerHTML+=message.charAt(i);
-i++;
-setTimeout(typeWriter,25);
-}
-}
-
+document.getElementById("text").innerText = message;
 /* Floating emojis */
 function startFloating(){
 let emojis=["❤️‍🔥","💋","😘","🫂"];
