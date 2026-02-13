@@ -13,6 +13,53 @@ font-family:'Poppins',sans-serif;
 background:black;
 overflow:hidden;
 color:white;
+  .magic-message{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:flex;
+justify-content:center;
+align-items:center;
+opacity:0;
+visibility:hidden;
+transition:0.5s;
+z-index:100;
+}
+
+.magic-message.show{
+opacity:1;
+visibility:visible;
+}
+
+.magic-content{
+background:white;
+color:#8b0000;
+padding:30px;
+border-radius:20px;
+text-align:center;
+font-size:22px;
+font-weight:800;
+box-shadow:0 0 30px crimson;
+animation:pop 0.5s ease;
+}
+
+.magic-content button{
+margin-top:15px;
+padding:8px 20px;
+border:none;
+background:crimson;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+
+@keyframes pop{
+from{transform:scale(0.5);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
 }
 
 /* PASSWORD SCREEN */
@@ -187,6 +234,16 @@ TAP TO OPEN 💌
 
 <p id="text"></p>
 
+<button class="magic-btn" onclick="showMagicMessage()">
+✨ Tap Me If Your Anger is 50% less now  ✨
+</button>
+<div class="magic-message" id="magicMessage">
+    <div class="magic-content">
+        Come back to me as my naughtiest kiddo please 🥹❤️‍🔥🫵🏻😭🫂🙏🏻
+        <br><br>
+        <button onclick="closeMagic()">Close 💋</button>
+    </div>
+</div>
 </div>
 
 <audio id="music" src="song.mp3" loop></audio>
@@ -298,6 +355,13 @@ fly.style.left=Math.random()*100+"%";
 document.body.appendChild(fly);
 setTimeout(()=>fly.remove(),6000);
 },300);
+}
+  function showMagicMessage(){
+document.getElementById("magicMessage").classList.add("show");
+}
+
+function closeMagic(){
+document.getElementById("magicMessage").classList.remove("show");
 }
 
 </script>
